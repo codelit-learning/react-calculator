@@ -40,15 +40,17 @@ class Calculator extends React.Component {
     }
 
     return (
-      <div>
+      <div className="container">
         <DisplayWindow expression={this.state.expression} />
-        {numberKeys}
-        <Button text="+" onKeyPressed={this.onKeyPressed} />
-        <Button text="-" onKeyPressed={this.onKeyPressed} />
-        <Button text="*" onKeyPressed={this.onKeyPressed} />
-        <Button text="/" onKeyPressed={this.onKeyPressed} />
-        <Button text="C" onKeyPressed={this.onDeletePressed} />
-        <button onClick={this.onEvaluatePressed}>=</button>
+        <div className="key-container">
+          {numberKeys}
+          <Button text="+" onKeyPressed={this.onKeyPressed} />
+          <Button text="-" onKeyPressed={this.onKeyPressed} />
+          <Button text="*" onKeyPressed={this.onKeyPressed} />
+          <Button text="/" onKeyPressed={this.onKeyPressed} />
+          <Button text="C" onKeyPressed={this.onDeletePressed} />
+          <button onClick={this.onEvaluatePressed} className="key">=</button>
+        </div>
       </div>
     );
   }
